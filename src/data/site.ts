@@ -1,9 +1,8 @@
 // Central content config for the EIM website.
-// This is a TEMPLATE — replace the placeholder text/values below with real content.
+// This is a TEMPLATE. Replace the placeholder text/values below with real content.
 
-const lorem =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder copy to be replaced with real content.";
-const loremShort = "Placeholder copy — replace with real content.";
+const lorem = "Placeholder text.";
+const loremShort = "Placeholder text.";
 
 export const siteConfig = {
   name: "Entrepreneurs Impact Marathon",
