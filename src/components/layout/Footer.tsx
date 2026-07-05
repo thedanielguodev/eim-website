@@ -84,7 +84,7 @@ export function Footer() {
           <p className="text-xs text-muted">
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
-          <p className="text-xs text-muted">Empowering student entrepreneurs nationwide.</p>
+          <p className="text-xs text-muted">Empowering student entrepreneurs worldwide.</p>
         </Container>
       </div>
     </footer>

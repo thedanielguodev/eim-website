@@ -9,7 +9,7 @@ export const siteConfig = {
   shortName: "EIM",
   tagline: "Solving Today's Challenges, Empowering Tomorrow's Impact.",
   description:
-    "EIM (Entrepreneur's Impact Marathon) is a nationwide competition where student teams turn bold ideas into real-world ventures.",
+    "EIM (Entrepreneur's Impact Marathon) is a worldwide competition where student teams turn bold ideas into real-world ventures.",
   // TODO: replace with the production custom domain once one is registered.
   url: "https://eim-website-ten.vercel.app",
   email: "hello@example.com",
@@ -35,7 +35,7 @@ export const navLinks = [
 export const heroContent = {
   headline: "Solving Today's Challenges, Empowering Tomorrow's Impact.",
   subheadline:
-    "EIM — the Entrepreneur's Impact Marathon — is a nationwide competition where student teams turn bold ideas into real-world ventures.",
+    "EIM — the Entrepreneur's Impact Marathon — is a worldwide competition where student teams turn bold ideas into real-world ventures.",
   primaryCta: { label: "Apply Now", href: "/apply" },
   secondaryCta: { label: "Learn More", href: "/#about" },
 };
