@@ -26,9 +26,9 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={label}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-brand-gold-400 hover:text-brand-gold-600"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gold-500 text-white shadow-sm transition-colors hover:bg-brand-gold-600"
               >
-                <Icon className="h-4 w-4" />
+                <Icon className="h-5 w-5" />
               </a>
             ))}
           </div>

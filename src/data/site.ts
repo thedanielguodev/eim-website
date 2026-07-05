@@ -7,7 +7,7 @@ const loremShort = "Placeholder text.";
 export const siteConfig = {
   name: "Entrepreneurs Impact Marathon",
   shortName: "EIM",
-  tagline: "Turn Ideas Into Impact.",
+  tagline: "Solving Today's Challenges, Empowering Tomorrow's Impact.",
   description: loremShort,
   url: "https://www.example.com",
   email: "hello@example.com",
@@ -31,7 +31,7 @@ export const navLinks = [
 ];
 
 export const heroContent = {
-  headline: "Turn Ideas Into Impact.",
+  headline: "Solving Today's Challenges, Empowering Tomorrow's Impact.",
   subheadline: loremShort,
   primaryCta: { label: "Apply Now", href: "/apply" },
   secondaryCta: { label: "Learn More", href: "/#about" },
