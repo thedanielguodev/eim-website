@@ -16,10 +16,7 @@ export function UrgencyBadge({
         className
       )}
     >
-      <span className="relative flex h-2 w-2">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-green-400 opacity-75" />
-        <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-green-500" />
-      </span>
+      <span className="h-2 w-2 shrink-0 rounded-full bg-brand-blue-400" />
       {applyUrgency}
     </div>
   );
