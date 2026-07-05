@@ -1,15 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { WhatsappIcon, WechatIcon } from "@/components/ui/SocialIcons";
 import { siteConfig } from "@/data/site";
 
 const contactDetails = [
   { icon: Mail, label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
-  { icon: Phone, label: "Phone", value: "(000) 000-0000", href: "tel:+10000000000" },
-  { icon: MapPin, label: "Address", value: "Placeholder Address, City, State", href: undefined },
+  { icon: WhatsappIcon, label: "WhatsApp", value: "Placeholder text.", href: undefined },
+  { icon: WechatIcon, label: "WeChat", value: "Placeholder text.", href: undefined },
 ];
 
 export function Contact() {

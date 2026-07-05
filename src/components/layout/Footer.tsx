@@ -2,19 +2,11 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Container } from "@/components/ui/Container";
-import {
-  InstagramIcon,
-  LinkedinIcon,
-  TwitterIcon,
-  YoutubeIcon,
-} from "@/components/ui/SocialIcons";
+import { InstagramIcon } from "@/components/ui/SocialIcons";
 import { footerLinks, siteConfig } from "@/data/site";
 
 const socialLinks = [
   { label: "Instagram", href: siteConfig.social.instagram, icon: InstagramIcon },
-  { label: "LinkedIn", href: siteConfig.social.linkedin, icon: LinkedinIcon },
-  { label: "Twitter", href: siteConfig.social.twitter, icon: TwitterIcon },
-  { label: "YouTube", href: siteConfig.social.youtube, icon: YoutubeIcon },
 ];
 
 export function Footer() {

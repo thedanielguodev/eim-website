@@ -10,41 +10,38 @@ export function InstagramIcon({ className }: IconProps) {
   );
 }
 
-export function LinkedinIcon({ className }: IconProps) {
+export function WhatsappIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M8 10.5V17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      <circle cx="8" cy="7.2" r="0.2" stroke="currentColor" strokeWidth="1.8" />
       <path
-        d="M12 17v-4a2 2 0 0 1 4 0v4"
+        d="M12 3a9 9 0 0 0-7.75 13.55L3 21l4.6-1.2A9 9 0 1 0 12 3z"
         stroke="currentColor"
         strokeWidth="1.8"
-        strokeLinecap="round"
+        strokeLinejoin="round"
       />
-      <path d="M12 10.5V17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path
+        d="M8.5 9c0 4 2.5 6.5 6.5 6.5.6 0 1-.5.9-1l-.3-1.3a.9.9 0 0 0-.9-.7l-1.3.2a5 5 0 0 1-2.6-2.6l.2-1.3a.9.9 0 0 0-.7-.9L9 7.6c-.5-.1-1 .3-1 .9z"
+        fill="currentColor"
+      />
     </svg>
   );
 }
 
-export function TwitterIcon({ className }: IconProps) {
+export function WechatIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
       <path
-        d="M4 4l7 9.5L4.5 20H7l5-5.5 4 5.5h3.5l-7.3-9.9L19.5 4H17l-4.6 5-3.6-5H4z"
+        d="M9.5 4.5c-3.6 0-6.5 2.4-6.5 5.5 0 1.8 1 3.3 2.5 4.4l-.6 2 2.2-1.1c.7.2 1.5.3 2.4.3h.3a5.6 5.6 0 0 1-.2-1.5c0-3.3 3-6 6.7-6h.2c-.7-2.1-3.3-3.6-7-3.6z"
         stroke="currentColor"
-        strokeWidth="1.4"
+        strokeWidth="1.5"
         strokeLinejoin="round"
       />
-    </svg>
-  );
-}
-
-export function YoutubeIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M10.5 9.5l5 2.5-5 2.5v-5z" fill="currentColor" />
+      <path
+        d="M16.2 9.6c-3 0-5.4 2-5.4 4.6 0 2.5 2.4 4.6 5.4 4.6.7 0 1.4-.1 2-.3l1.8.9-.5-1.6c1.2-.9 2.1-2.1 2.1-3.6 0-2.6-2.4-4.6-5.4-4.6z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }

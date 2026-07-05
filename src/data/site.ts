@@ -13,10 +13,7 @@ export const siteConfig = {
   email: "hello@example.com",
   applyUrl: "/apply",
   social: {
-    instagram: "https://instagram.com/example",
-    linkedin: "https://linkedin.com/company/example",
-    twitter: "https://twitter.com/example",
-    youtube: "https://youtube.com/@example",
+    instagram: "https://www.instagram.com/eimcompetition/",
   },
 };
 
@@ -34,7 +31,6 @@ export const navLinks = [
 ];
 
 export const heroContent = {
-  eyebrow: "Placeholder Badge Text",
   headline: "Turn Ideas Into Impact.",
   subheadline: loremShort,
   primaryCta: { label: "Apply Now", href: "/apply" },
@@ -89,7 +85,7 @@ export const requirements = {
   teamStructure: ["Placeholder team requirement 1", "Placeholder team requirement 2", "Placeholder team requirement 3"],
   submission: ["Placeholder submission item 1", "Placeholder submission item 2", "Placeholder submission item 3"],
   deadlines: [
-    { label: "Registration Opens", date: "TBD" },
+    { label: "Registration Period", date: "August - October 2026" },
     { label: "Submission Deadline", date: "TBD" },
     { label: "Finalist Announcement", date: "TBD" },
     { label: "Pitch Day", date: "TBD" },
@@ -99,7 +95,8 @@ export const requirements = {
 };
 
 export const timelineMilestones = [
-  { title: "Registration Opens", date: "TBD", description: loremShort },
+  { title: "Registration Opens", date: "August 2026", description: loremShort },
+  { title: "Registration Closes", date: "October 2026", description: loremShort },
   { title: "Team Formation", date: "TBD", description: loremShort },
   { title: "Workshops", date: "TBD", description: loremShort },
   { title: "Submission Deadline", date: "TBD", description: loremShort },
@@ -109,12 +106,9 @@ export const timelineMilestones = [
 ];
 
 export const tracks = [
-  { icon: "Leaf", name: "Track Name 1", description: loremShort },
-  { icon: "HeartPulse", name: "Track Name 2", description: loremShort },
-  { icon: "Landmark", name: "Track Name 3", description: loremShort },
-  { icon: "Cpu", name: "Track Name 4", description: loremShort },
-  { icon: "Wallet", name: "Track Name 5", description: loremShort },
-  { icon: "ShoppingBag", name: "Track Name 6", description: loremShort },
+  { icon: "Leaf", name: "Environment", description: loremShort },
+  { icon: "HeartPulse", name: "Health", description: loremShort },
+  { icon: "Cpu", name: "Technology", description: loremShort },
 ];
 
 export const judgingRubric = [

@@ -51,20 +51,11 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-6xl px-6 py-24 lg:px-8">
-        <motion.span
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full bg-brand-blue-50 px-4 py-1.5 text-sm font-medium text-brand-blue-600"
-        >
-          {heroContent.eyebrow}
-        </motion.span>
-
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-6 max-w-3xl text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
+          className="max-w-3xl text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
         >
           {heroContent.headline}
         </motion.h1>

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -21,12 +19,6 @@ export default function ApplyPage() {
         <p className="mt-4 text-lg leading-relaxed text-muted">
           Placeholder text. The application form goes here.
         </p>
-        <div className="mt-8 flex justify-center">
-          <Button href={`mailto:${siteConfig.email}`} variant="primary">
-            Contact Us to Apply
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-        </div>
       </Container>
     </section>
   );
