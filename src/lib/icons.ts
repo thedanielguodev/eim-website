@@ -1,0 +1,42 @@
+import {
+  Rocket,
+  Users,
+  Share2,
+  Compass,
+  Globe2,
+  GraduationCap,
+  Layers,
+  UsersRound,
+  FileUp,
+  Presentation,
+  Trophy,
+  Leaf,
+  HeartPulse,
+  Landmark,
+  Cpu,
+  Wallet,
+  ShoppingBag,
+  type LucideIcon,
+} from "lucide-react";
+
+export const iconMap = {
+  Rocket,
+  Users,
+  Share2,
+  Compass,
+  Globe2,
+  GraduationCap,
+  Layers,
+  UsersRound,
+  FileUp,
+  Presentation,
+  Trophy,
+  Leaf,
+  HeartPulse,
+  Landmark,
+  Cpu,
+  Wallet,
+  ShoppingBag,
+} satisfies Record<string, LucideIcon>;
+
+export type IconName = keyof typeof iconMap;
