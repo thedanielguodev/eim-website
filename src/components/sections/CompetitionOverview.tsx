@@ -30,7 +30,7 @@ export function CompetitionOverview() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative flex flex-col items-start lg:items-center lg:text-center"
               >
-                <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-brand-blue-500 bg-white text-base font-bold text-brand-blue-600">
+                <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-brand-gold-500 bg-white font-display text-base font-semibold text-brand-gold-600">
                   {index + 1}
                 </div>
                 <h3 className="mt-4 text-base font-semibold text-foreground">{item.title}</h3>

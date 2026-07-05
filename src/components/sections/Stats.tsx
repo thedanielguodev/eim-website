@@ -19,7 +19,7 @@ export function Stats() {
               transition={{ duration: 0.5, delay: index * 0.08 }}
               className="text-center"
             >
-              <p className="text-3xl font-bold tracking-tight text-brand-blue-600 sm:text-4xl">
+              <p className="font-display text-3xl font-semibold tracking-tight text-brand-gold-600 sm:text-4xl">
                 <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
               </p>
               <p className="mt-2 text-sm font-medium text-muted">{stat.label}</p>

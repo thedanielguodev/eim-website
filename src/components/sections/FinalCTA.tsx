@@ -15,19 +15,19 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-blue-600 to-brand-blue-500 px-8 py-16 text-center sm:px-16 sm:py-20"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-ink-900 to-brand-ink-500 px-8 py-16 text-center sm:px-16 sm:py-20"
         >
           <div
             aria-hidden
             className="absolute inset-0 opacity-20"
             style={{
               backgroundImage:
-                "radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px)",
+                "radial-gradient(circle, rgba(201,163,92,0.7) 1px, transparent 1px)",
               backgroundSize: "24px 24px",
             }}
           />
 
-          <h2 className="relative mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="relative mx-auto max-w-2xl font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Ready to Build Something That Matters?
           </h2>
           <div className="relative mt-8 flex flex-col items-center gap-4">

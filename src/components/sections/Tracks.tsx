@@ -10,9 +10,9 @@ import { tracks } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 const accentPalette = [
-  { bar: "bg-brand-green-400", icon: "bg-brand-green-50 text-brand-green-600", link: "text-brand-green-600 hover:text-brand-green-700" },
-  { bar: "bg-rose-400", icon: "bg-rose-50 text-rose-600", link: "text-rose-600 hover:text-rose-700" },
-  { bar: "bg-brand-blue-400", icon: "bg-brand-blue-50 text-brand-blue-600", link: "text-brand-blue-600 hover:text-brand-blue-700" },
+  { bar: "bg-brand-gold-500", icon: "bg-brand-gold-50 text-brand-gold-600", link: "text-brand-gold-600 hover:text-brand-gold-700" },
+  { bar: "bg-brand-ink-600", icon: "bg-brand-ink-50 text-brand-ink-600", link: "text-brand-ink-600 hover:text-brand-ink-900" },
+  { bar: "bg-brand-gold-700", icon: "bg-brand-gold-100 text-brand-gold-700", link: "text-brand-gold-700 hover:text-brand-gold-600" },
 ];
 
 function TrackCard({

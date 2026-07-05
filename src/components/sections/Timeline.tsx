@@ -37,11 +37,11 @@ export function Timeline() {
                 >
                   <span
                     aria-hidden
-                    className={`absolute left-0 top-1 h-6 w-6 rounded-full border-4 border-white bg-brand-blue-500 shadow-sm sm:top-1 ${
+                    className={`absolute left-0 top-1 h-6 w-6 rounded-full border-4 border-white bg-brand-gold-500 shadow-sm sm:top-1 ${
                       isLeft ? "sm:left-auto sm:-right-[13px]" : "sm:-left-[13px]"
                     }`}
                   />
-                  <p className="text-sm font-semibold text-brand-blue-600">{milestone.date}</p>
+                  <p className="text-sm font-semibold text-brand-gold-600">{milestone.date}</p>
                   <h3 className="mt-1 text-lg font-semibold text-foreground">{milestone.title}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-muted">
                     {milestone.description}

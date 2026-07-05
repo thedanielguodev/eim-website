@@ -26,7 +26,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={label}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-brand-blue-400 hover:text-brand-blue-600"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-brand-gold-400 hover:text-brand-gold-600"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -41,7 +41,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-muted transition-colors hover:text-brand-blue-600"
+                  className="text-sm text-muted transition-colors hover:text-brand-gold-600"
                 >
                   {link.label}
                 </Link>
@@ -55,7 +55,7 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-muted">
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 shrink-0" />
-              <a href={`mailto:${siteConfig.email}`} className="hover:text-brand-blue-600">
+              <a href={`mailto:${siteConfig.email}`} className="hover:text-brand-gold-600">
                 {siteConfig.email}
               </a>
             </li>
@@ -69,7 +69,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-muted transition-colors hover:text-brand-blue-600"
+                  className="text-sm text-muted transition-colors hover:text-brand-gold-600"
                 >
                   {link.label}
                 </Link>

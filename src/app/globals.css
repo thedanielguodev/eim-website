@@ -2,23 +2,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
-  --muted: #64748b;
-  --border: #e5e9f0;
-  --surface: #f8faff;
+  --foreground: #1c1917;
+  --muted: #78716c;
+  --border: #e7e5e4;
+  --surface: #faf9f7;
 
-  --brand-blue-50: #eef4ff;
-  --brand-blue-100: #dbe7ff;
-  --brand-blue-400: #4d7fff;
-  --brand-blue-500: #2f63eb;
-  --brand-blue-600: #204ecb;
-  --brand-blue-700: #1a3fa3;
+  --brand-gold-50: #fbf3e1;
+  --brand-gold-100: #f3e2b8;
+  --brand-gold-400: #d9b36c;
+  --brand-gold-500: #c9a35c;
+  --brand-gold-600: #a67c3d;
+  --brand-gold-700: #7c5a26;
 
-  --brand-green-50: #ecfdf3;
-  --brand-green-100: #d3f9e0;
-  --brand-green-400: #34d399;
-  --brand-green-500: #14b881;
-  --brand-green-600: #0f9c6d;
+  --brand-ink-50: #f2f1ef;
+  --brand-ink-400: #4a4744;
+  --brand-ink-500: #2a2826;
+  --brand-ink-600: #1a1817;
+  --brand-ink-900: #0a0908;
 }
 
 @theme inline {
@@ -28,31 +28,31 @@
   --color-border: var(--border);
   --color-surface: var(--surface);
 
-  --color-brand-blue-50: var(--brand-blue-50);
-  --color-brand-blue-100: var(--brand-blue-100);
-  --color-brand-blue-400: var(--brand-blue-400);
-  --color-brand-blue-500: var(--brand-blue-500);
-  --color-brand-blue-600: var(--brand-blue-600);
-  --color-brand-blue-700: var(--brand-blue-700);
+  --color-brand-gold-50: var(--brand-gold-50);
+  --color-brand-gold-100: var(--brand-gold-100);
+  --color-brand-gold-400: var(--brand-gold-400);
+  --color-brand-gold-500: var(--brand-gold-500);
+  --color-brand-gold-600: var(--brand-gold-600);
+  --color-brand-gold-700: var(--brand-gold-700);
 
-  --color-brand-green-50: var(--brand-green-50);
-  --color-brand-green-100: var(--brand-green-100);
-  --color-brand-green-400: var(--brand-green-400);
-  --color-brand-green-500: var(--brand-green-500);
-  --color-brand-green-600: var(--brand-green-600);
+  --color-brand-ink-50: var(--brand-ink-50);
+  --color-brand-ink-400: var(--brand-ink-400);
+  --color-brand-ink-500: var(--brand-ink-500);
+  --color-brand-ink-600: var(--brand-ink-600);
+  --color-brand-ink-900: var(--brand-ink-900);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 
   --animate-marquee: marquee 32s linear infinite;
 }
 
 .dark {
-  --background: #0a0e17;
-  --foreground: #f1f5f9;
-  --muted: #94a3b8;
-  --border: #1f2937;
-  --surface: #10151f;
+  --background: #0a0908;
+  --foreground: #f2f1ef;
+  --muted: #a39c92;
+  --border: #2a2826;
+  --surface: #141210;
 }
 
 body {
@@ -61,8 +61,8 @@ body {
 }
 
 ::selection {
-  background: var(--brand-blue-100);
-  color: var(--brand-blue-700);
+  background: var(--brand-gold-100);
+  color: var(--brand-ink-900);
 }
 
 @keyframes marquee {

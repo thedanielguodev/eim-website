@@ -16,7 +16,7 @@ export function UrgencyBadge({
         className
       )}
     >
-      <span className="h-2 w-2 shrink-0 rounded-full bg-brand-blue-400" />
+      <span className="h-2 w-2 shrink-0 rounded-full bg-brand-gold-500" />
       {applyUrgency}
     </div>
   );

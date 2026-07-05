@@ -9,12 +9,11 @@ type ButtonProps = {
 };
 
 const variants = {
-  primary:
-    "bg-brand-blue-500 text-white hover:bg-brand-blue-600 shadow-sm shadow-brand-blue-500/20",
+  primary: "bg-brand-ink-900 text-white hover:bg-brand-ink-600 shadow-sm shadow-black/10",
   secondary:
-    "bg-white text-foreground border border-border hover:border-brand-blue-400 hover:text-brand-blue-600",
-  ghost: "text-foreground hover:text-brand-blue-600",
-  white: "bg-white text-brand-blue-700 hover:bg-white/90 shadow-sm shadow-black/5",
+    "bg-white text-foreground border border-border hover:border-brand-gold-500 hover:text-brand-ink-900",
+  ghost: "text-foreground hover:text-brand-gold-600",
+  white: "bg-white text-brand-ink-900 hover:bg-white/90 shadow-sm shadow-black/5",
 };
 
 export function Button({ href, children, variant = "primary", className }: ButtonProps) {
@@ -22,7 +21,7 @@ export function Button({ href, children, variant = "primary", className }: Butto
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-200",
+        "inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-colors duration-200",
         variants[variant],
         className
       )}

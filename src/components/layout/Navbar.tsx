@@ -46,7 +46,7 @@ export function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-foreground/80 transition-colors duration-200 hover:text-brand-blue-600"
+                className="text-sm font-medium text-foreground/80 transition-colors duration-200 hover:text-brand-gold-600"
               >
                 {link.label}
               </Link>
@@ -86,7 +86,7 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="block rounded-lg px-3 py-3 text-base font-medium text-foreground/80 hover:bg-surface hover:text-brand-blue-600"
+                    className="block rounded-lg px-3 py-3 text-base font-medium text-foreground/80 hover:bg-surface hover:text-brand-gold-600"
                   >
                     {link.label}
                   </Link>

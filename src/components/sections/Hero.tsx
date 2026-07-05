@@ -9,17 +9,17 @@ import { cn } from "@/lib/utils";
 
 const GRID_COLS = 6;
 const GRID_ROWS = 6;
-const ACTIVE_CELLS: Record<number, "blue" | "green"> = {
-  2: "blue",
-  7: "green",
-  9: "blue",
-  13: "green",
-  16: "blue",
-  20: "green",
-  23: "blue",
-  27: "green",
-  30: "blue",
-  33: "green",
+const ACTIVE_CELLS: Record<number, "gold" | "ink"> = {
+  2: "gold",
+  7: "ink",
+  9: "gold",
+  13: "ink",
+  16: "gold",
+  20: "ink",
+  23: "gold",
+  27: "ink",
+  30: "gold",
+  33: "ink",
 };
 
 export function Hero() {
@@ -55,9 +55,9 @@ export function Hero() {
                 }
                 className={cn(
                   "rounded-lg",
-                  tone === "blue" && "bg-brand-blue-400",
-                  tone === "green" && "bg-brand-green-400",
-                  !tone && "bg-slate-100"
+                  tone === "gold" && "bg-brand-gold-400",
+                  tone === "ink" && "bg-brand-ink-500",
+                  !tone && "bg-stone-100"
                 )}
               />
             );
@@ -70,7 +70,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="max-w-3xl text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
+          className="max-w-3xl font-display text-5xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
         >
           {heroContent.headline}
         </motion.h1>

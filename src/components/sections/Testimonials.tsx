@@ -16,7 +16,7 @@ export function Testimonials() {
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <Card key={testimonial.name} delay={index * 0.08} className="bg-white">
-              <Quote className="h-6 w-6 text-brand-green-400" />
+              <Quote className="h-6 w-6 text-brand-gold-400" />
               <p className="mt-4 text-base leading-relaxed text-foreground/80">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>

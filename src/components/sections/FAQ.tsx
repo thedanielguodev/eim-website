@@ -31,7 +31,7 @@ export function FAQ() {
                   <ChevronDown
                     className={cn(
                       "h-5 w-5 shrink-0 text-muted transition-transform duration-300",
-                      isOpen && "rotate-180 text-brand-blue-600"
+                      isOpen && "rotate-180 text-brand-gold-600"
                     )}
                   />
                 </button>

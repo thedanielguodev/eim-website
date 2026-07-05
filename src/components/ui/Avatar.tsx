@@ -12,7 +12,7 @@ export function Avatar({ name, className = "h-16 w-16" }: { name: string; classN
   return (
     <div
       aria-hidden
-      className={`flex shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-blue-400 to-brand-green-400 font-semibold text-white ${className}`}
+      className={`flex shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-gold-500 to-brand-ink-600 font-semibold text-white ${className}`}
     >
       {getInitials(name)}
     </div>

@@ -32,12 +32,12 @@ export function Contact() {
         >
           {contactDetails.map(({ icon: Icon, label, value, href }) => (
             <div key={label} className="text-center sm:text-left">
-              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-brand-blue-50 text-brand-blue-600 sm:mx-0">
+              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold-50 text-brand-gold-600 sm:mx-0">
                 <Icon className="h-5 w-5" />
               </div>
               <p className="mt-3 text-sm font-semibold text-foreground">{label}</p>
               {href ? (
-                <a href={href} className="text-sm text-muted hover:text-brand-blue-600">
+                <a href={href} className="text-sm text-muted hover:text-brand-gold-600">
                   {value}
                 </a>
               ) : (

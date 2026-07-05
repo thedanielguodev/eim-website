@@ -31,7 +31,7 @@ export function Judging() {
             >
               <div className="flex items-baseline justify-between gap-4 sm:w-56 sm:shrink-0 sm:flex-col sm:items-start sm:justify-start sm:gap-1">
                 <h3 className="text-base font-semibold text-foreground">{item.category}</h3>
-                <span className="text-sm font-semibold text-brand-blue-600">{item.weight}%</span>
+                <span className="text-sm font-semibold text-brand-gold-600">{item.weight}%</span>
               </div>
 
               <div className="flex-1">
@@ -41,7 +41,7 @@ export function Judging() {
                     whileInView={{ width: `${(item.weight / maxWeight) * 100}%` }}
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.8, delay: index * 0.06 + 0.1, ease: "easeOut" }}
-                    className="h-full rounded-full bg-gradient-to-r from-brand-blue-500 to-brand-green-400"
+                    className="h-full rounded-full bg-gradient-to-r from-brand-gold-600 to-brand-gold-400"
                   />
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
@@ -63,7 +63,7 @@ export function Judging() {
                   <Avatar name={judge.name} />
                 </div>
                 <h3 className="mt-4 text-base font-semibold text-foreground">{judge.name}</h3>
-                <p className="text-sm font-medium text-brand-blue-600">{judge.title}</p>
+                <p className="text-sm font-medium text-brand-gold-600">{judge.title}</p>
                 <p className="text-sm text-muted">{judge.organization}</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{judge.bio}</p>
               </Card>

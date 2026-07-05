@@ -48,7 +48,7 @@ export function Requirements() {
                 className={cn(
                   "shrink-0 rounded-xl px-4 py-2.5 text-left text-sm font-medium transition-colors lg:w-full",
                   active === index
-                    ? "bg-brand-blue-50 text-brand-blue-600"
+                    ? "bg-brand-gold-50 text-brand-gold-700"
                     : "text-muted hover:bg-surface hover:text-foreground"
                 )}
               >
@@ -71,7 +71,7 @@ export function Requirements() {
                   {activeGroup.type === "checklist"
                     ? activeGroup.items.map((item) => (
                         <li key={item} className="flex items-start gap-2.5 text-sm text-muted">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-green-500" />
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
                           <span>{item}</span>
                         </li>
                       ))
@@ -80,7 +80,7 @@ export function Requirements() {
                           key={deadline.label}
                           className="flex items-start gap-2.5 text-sm text-muted"
                         >
-                          <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue-500" />
+                          <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold-600" />
                           <span>
                             <span className="font-medium text-foreground">
                               {deadline.label}:

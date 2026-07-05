@@ -22,13 +22,13 @@ export function WhyParticipate() {
               transition={{ duration: 0.5, delay: index * 0.06 }}
               className={cn(
                 "flex gap-5 border-l-2 pl-5",
-                index % 2 === 0 ? "border-brand-blue-400" : "border-brand-green-400"
+                index % 2 === 0 ? "border-brand-gold-400" : "border-brand-ink-400"
               )}
             >
               <span
                 className={cn(
-                  "text-3xl font-bold tabular-nums",
-                  index % 2 === 0 ? "text-brand-blue-100" : "text-brand-green-100"
+                  "font-display text-3xl font-semibold tabular-nums",
+                  index % 2 === 0 ? "text-brand-gold-100" : "text-stone-300"
                 )}
               >
                 {String(index + 1).padStart(2, "0")}
