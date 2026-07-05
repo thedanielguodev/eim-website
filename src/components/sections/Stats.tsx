@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Container } from "@/components/ui/Container";
 import { stats } from "@/data/site";
+import { cn } from "@/lib/utils";
 
 export function Stats() {
   return (
@@ -17,7 +18,10 @@ export function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="text-center"
+              className={cn(
+                "text-center",
+                index === stats.length - 1 && "col-span-2 sm:col-span-1"
+              )}
             >
               <p className="font-display text-3xl font-semibold tracking-tight text-brand-gold-600 sm:text-4xl">
                 <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />

@@ -39,14 +39,14 @@ export function Requirements() {
         />
 
         <div className="mt-14 grid gap-2 rounded-2xl border border-border bg-white p-2 lg:grid-cols-[240px_1fr] lg:gap-0 lg:p-0">
-          <div className="flex gap-2 overflow-x-auto p-2 lg:flex-col lg:overflow-visible lg:border-r lg:border-border lg:p-4">
+          <div className="flex gap-2 overflow-x-auto p-2 shadow-[inset_-16px_0_12px_-10px_rgba(15,23,42,0.1)] lg:flex-col lg:overflow-visible lg:border-r lg:border-border lg:p-4 lg:shadow-none">
             {groups.map((group, index) => (
               <button
                 key={group.heading}
                 type="button"
                 onClick={() => setActive(index)}
                 className={cn(
-                  "shrink-0 rounded-xl px-4 py-2.5 text-left text-sm font-medium transition-colors lg:w-full",
+                  "shrink-0 rounded-xl px-4 py-2.5 text-left text-sm font-medium whitespace-nowrap transition-colors lg:w-full",
                   active === index
                     ? "bg-brand-gold-50 text-brand-gold-700"
                     : "text-muted hover:bg-surface hover:text-foreground"
