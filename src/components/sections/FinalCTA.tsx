@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { UrgencyBadge } from "@/components/ui/UrgencyBadge";
 
 export function FinalCTA() {
   return (
@@ -18,21 +19,23 @@ export function FinalCTA() {
         >
           <div
             aria-hidden
-            className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-brand-green-400/30 blur-3xl"
-          />
-          <div
-            aria-hidden
-            className="absolute -bottom-20 -left-16 h-64 w-64 rounded-full bg-white/10 blur-3xl"
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px)",
+              backgroundSize: "24px 24px",
+            }}
           />
 
           <h2 className="relative mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Ready to Build Something That Matters?
           </h2>
-          <div className="relative mt-8 flex justify-center">
+          <div className="relative mt-8 flex flex-col items-center gap-4">
             <Button href="/apply" variant="white">
               Apply Today
               <ArrowRight className="h-4 w-4" />
             </Button>
+            <UrgencyBadge tone="dark" />
           </div>
         </motion.div>
       </Container>

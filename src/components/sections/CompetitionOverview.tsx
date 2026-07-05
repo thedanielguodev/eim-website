@@ -1,9 +1,8 @@
 "use client";
 
-import { Card } from "@/components/ui/Card";
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { iconMap, type IconName } from "@/lib/icons";
 import { competitionOverview } from "@/data/site";
 
 export function CompetitionOverview() {
@@ -16,19 +15,31 @@ export function CompetitionOverview() {
           description="A clear, structured path from idea to pitch."
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {competitionOverview.map((item, index) => {
-            const Icon = iconMap[item.icon as IconName];
-            return (
-              <Card key={item.title} delay={index * 0.08}>
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-green-50 text-brand-green-600">
-                  <Icon className="h-6 w-6" />
+        <div className="relative mt-20">
+          <div
+            aria-hidden
+            className="absolute left-0 right-0 top-6 hidden h-px bg-border lg:block"
+          />
+          <div className="grid gap-10 lg:grid-cols-5 lg:gap-6">
+            {competitionOverview.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative flex flex-col items-start lg:items-center lg:text-center"
+              >
+                <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-brand-blue-500 bg-white text-base font-bold text-brand-blue-600">
+                  {index + 1}
                 </div>
-                <h3 className="mt-5 text-lg font-semibold text-foreground">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
-              </Card>
-            );
-          })}
+                <h3 className="mt-4 text-base font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted lg:max-w-[190px]">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

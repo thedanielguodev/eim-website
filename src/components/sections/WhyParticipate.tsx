@@ -1,10 +1,10 @@
 "use client";
 
-import { Card } from "@/components/ui/Card";
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { iconMap, type IconName } from "@/lib/icons";
 import { whyParticipateItems } from "@/data/site";
+import { cn } from "@/lib/utils";
 
 export function WhyParticipate() {
   return (
@@ -12,19 +12,33 @@ export function WhyParticipate() {
       <Container>
         <SectionHeading eyebrow="Why Participate" heading="What you'll gain from EIM" />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {whyParticipateItems.map((item, index) => {
-            const Icon = iconMap[item.icon as IconName];
-            return (
-              <Card key={item.title} delay={index * 0.08} className="bg-white">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue-50 text-brand-blue-600">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className="mt-5 text-lg font-semibold text-foreground">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
-              </Card>
-            );
-          })}
+        <div className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2">
+          {whyParticipateItems.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: index * 0.06 }}
+              className={cn(
+                "flex gap-5 border-l-2 pl-5",
+                index % 2 === 0 ? "border-brand-blue-400" : "border-brand-green-400"
+              )}
+            >
+              <span
+                className={cn(
+                  "text-3xl font-bold tabular-nums",
+                  index % 2 === 0 ? "text-brand-blue-100" : "text-brand-green-100"
+                )}
+              >
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">{item.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </Container>
     </section>

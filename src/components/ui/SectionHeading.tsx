@@ -29,11 +29,19 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <span className="inline-flex items-center rounded-full bg-brand-blue-50 px-4 py-1.5 text-sm font-medium text-brand-blue-600">
-          {eyebrow}
-        </span>
+        <div
+          className={cn(
+            "flex items-center gap-2",
+            align === "center" ? "justify-center" : "justify-start"
+          )}
+        >
+          <span className="h-px w-6 bg-brand-blue-500" aria-hidden />
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-blue-600">
+            {eyebrow}
+          </span>
+        </div>
       ) : null}
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
         {heading}
       </h2>
       {description ? (

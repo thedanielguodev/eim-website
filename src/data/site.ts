@@ -37,6 +37,8 @@ export const heroContent = {
   secondaryCta: { label: "Learn More", href: "/#about" },
 };
 
+export const applyUrgency = "Registration open now. Closes October 2026.";
+
 export const stats = [
   { label: "Student Participants", value: 1000, suffix: "+" },
   { label: "Schools Represented", value: 100, suffix: "+" },

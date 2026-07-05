@@ -1,10 +1,13 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Avatar } from "@/components/ui/Avatar";
 import { judgingRubric, judges } from "@/data/site";
+
+const maxWeight = Math.max(...judgingRubric.map((item) => item.weight));
 
 export function Judging() {
   return (
@@ -16,22 +19,42 @@ export function Judging() {
           description="Submissions and pitches are evaluated against a consistent rubric."
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 divide-y divide-border rounded-2xl border border-border bg-white">
           {judgingRubric.map((item, index) => (
-            <Card key={item.category} delay={index * 0.06} className="bg-white">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-foreground">{item.category}</h3>
-                <span className="rounded-full bg-brand-green-50 px-3 py-1 text-sm font-semibold text-brand-green-600">
-                  {item.weight}%
-                </span>
+            <motion.div
+              key={item.category}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: index * 0.06 }}
+              className="flex flex-col gap-3 p-6 sm:flex-row sm:items-center sm:gap-8"
+            >
+              <div className="flex items-baseline justify-between gap-4 sm:w-56 sm:shrink-0 sm:flex-col sm:items-start sm:justify-start sm:gap-1">
+                <h3 className="text-base font-semibold text-foreground">{item.category}</h3>
+                <span className="text-sm font-semibold text-brand-blue-600">{item.weight}%</span>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{item.description}</p>
-            </Card>
+
+              <div className="flex-1">
+                <div className="h-2 w-full overflow-hidden rounded-full bg-surface">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${(item.weight / maxWeight) * 100}%` }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.8, delay: index * 0.06 + 0.1, ease: "easeOut" }}
+                    className="h-full rounded-full bg-gradient-to-r from-brand-blue-500 to-brand-green-400"
+                  />
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
 
         <div className="mt-24">
-          <SectionHeading heading="Meet the judges" description="A panel of founders, investors, and educators." />
+          <SectionHeading
+            heading="Meet the judges"
+            description="A panel of founders, investors, and educators."
+          />
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {judges.map((judge, index) => (
