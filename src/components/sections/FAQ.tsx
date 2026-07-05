@@ -19,12 +19,16 @@ export function FAQ() {
         <div className="mt-12 divide-y divide-border rounded-2xl border border-border bg-white">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
+            const buttonId = `faq-question-${index}`;
+            const panelId = `faq-answer-${index}`;
             return (
               <div key={item.question}>
                 <button
                   type="button"
+                  id={buttonId}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
+                  aria-controls={panelId}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                 >
                   <span className="text-base font-medium text-foreground">{item.question}</span>
@@ -38,6 +42,9 @@ export function FAQ() {
                 <AnimatePresence initial={false}>
                   {isOpen ? (
                     <motion.div
+                      id={panelId}
+                      role="region"
+                      aria-labelledby={buttonId}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}

@@ -8,8 +8,10 @@ export const siteConfig = {
   name: "Entrepreneur's Impact Marathon",
   shortName: "EIM",
   tagline: "Solving Today's Challenges, Empowering Tomorrow's Impact.",
-  description: loremShort,
-  url: "https://www.example.com",
+  description:
+    "EIM (Entrepreneur's Impact Marathon) is a nationwide competition where student teams turn bold ideas into real-world ventures.",
+  // TODO: replace with the production custom domain once one is registered.
+  url: "https://eim-website-ten.vercel.app",
   email: "hello@example.com",
   applyUrl: "/apply",
   social: {
@@ -109,9 +111,9 @@ export const timelineMilestones = [
 ];
 
 export const tracks = [
-  { icon: "Leaf", name: "Environment", description: loremShort },
-  { icon: "HeartPulse", name: "Health", description: loremShort },
-  { icon: "Cpu", name: "Technology", description: loremShort },
+  { icon: "Leaf", name: "Environment", description: loremShort, details: loremShort },
+  { icon: "HeartPulse", name: "Health", description: loremShort, details: loremShort },
+  { icon: "Cpu", name: "Technology", description: loremShort, details: loremShort },
 ];
 
 export const judgingRubric = [

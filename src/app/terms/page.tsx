@@ -3,6 +3,8 @@ import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
+  description: "Terms and conditions for participating in the Entrepreneur's Impact Marathon (EIM).",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

@@ -42,16 +42,23 @@ export function Navbar() {
         <Logo />
 
         <ul className="hidden items-center gap-7 lg:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-sm font-medium text-foreground/80 transition-colors duration-200 hover:text-brand-gold-600"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const className =
+              "text-sm font-medium text-foreground/80 transition-colors duration-200 hover:text-brand-gold-600";
+            return (
+              <li key={link.href}>
+                {link.href.startsWith("/#") ? (
+                  <a href={link.href} className={className}>
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link href={link.href} className={className}>
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
         </ul>
 
         <div className="hidden lg:block">
@@ -81,17 +88,27 @@ export function Navbar() {
             className="overflow-hidden bg-white shadow-lg lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-6 pb-6 pt-2">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="block rounded-lg px-3 py-3 text-base font-medium text-foreground/80 hover:bg-surface hover:text-brand-gold-600"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map((link) => {
+                const className =
+                  "block rounded-lg px-3 py-3 text-base font-medium text-foreground/80 hover:bg-surface hover:text-brand-gold-600";
+                return (
+                  <li key={link.href}>
+                    {link.href.startsWith("/#") ? (
+                      <a href={link.href} onClick={() => setMenuOpen(false)} className={className}>
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        onClick={() => setMenuOpen(false)}
+                        className={className}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
               <li className="pt-2">
                 <Button href="/apply" className="w-full">
                   Apply Now

@@ -4,6 +4,9 @@ import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Apply",
+  description:
+    "Apply to compete in the Entrepreneur's Impact Marathon (EIM). Registration opens August 2026.",
+  alternates: { canonical: "/apply" },
 };
 
 export default function ApplyPage() {

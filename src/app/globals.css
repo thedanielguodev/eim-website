@@ -60,6 +60,14 @@ body {
   color: var(--foreground);
 }
 
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--brand-gold-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 ::selection {
   background: var(--brand-gold-100);
   color: var(--brand-ink-900);

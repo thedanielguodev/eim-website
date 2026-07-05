@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { useId, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -19,16 +20,21 @@ function TrackCard({
   icon,
   name,
   description,
+  details,
   delay,
   accent,
 }: {
   icon: string;
   name: string;
   description: string;
+  details: string;
   delay: number;
   accent: (typeof accentPalette)[number];
 }) {
   const Icon = iconMap[icon as IconName];
+  const [isOpen, setIsOpen] = useState(false);
+  const panelId = useId();
+
   return (
     <Card delay={delay} className="relative flex flex-col overflow-hidden bg-white">
       <div aria-hidden className={cn("absolute inset-x-0 top-0 h-1.5", accent.bar)} />
@@ -37,13 +43,36 @@ function TrackCard({
       </div>
       <h3 className="mt-5 text-lg font-semibold text-foreground">{name}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{description}</p>
-      <Link
-        href="/#requirements"
-        className={cn("mt-5 inline-flex items-center gap-1.5 text-sm font-semibold", accent.link)}
+      <button
+        type="button"
+        onClick={() => setIsOpen((open) => !open)}
+        aria-expanded={isOpen}
+        aria-controls={panelId}
+        className={cn(
+          "mt-5 inline-flex items-center gap-1.5 self-start text-sm font-semibold",
+          accent.link
+        )}
       >
         Learn More
-        <ArrowRight className="h-4 w-4" />
-      </Link>
+        <ChevronDown
+          className={cn("h-4 w-4 transition-transform duration-300", isOpen && "rotate-180")}
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {isOpen ? (
+          <motion.div
+            id={panelId}
+            role="region"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="overflow-hidden"
+          >
+            <p className="mt-3 text-sm leading-relaxed text-muted">{details}</p>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </Card>
   );
 }

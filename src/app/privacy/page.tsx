@@ -3,6 +3,8 @@ import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
+  description: "How the Entrepreneur's Impact Marathon (EIM) collects, uses, and protects your data.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
