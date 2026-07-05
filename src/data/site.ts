@@ -5,7 +5,7 @@ const lorem = "Placeholder text.";
 const loremShort = "Placeholder text.";
 
 export const siteConfig = {
-  name: "Entrepreneurs Impact Marathon",
+  name: "Entrepreneur's Impact Marathon",
   shortName: "EIM",
   tagline: "Solving Today's Challenges, Empowering Tomorrow's Impact.",
   description: loremShort,
@@ -32,7 +32,8 @@ export const navLinks = [
 
 export const heroContent = {
   headline: "Solving Today's Challenges, Empowering Tomorrow's Impact.",
-  subheadline: loremShort,
+  subheadline:
+    "EIM — the Entrepreneur's Impact Marathon — is a nationwide competition where student teams turn bold ideas into real-world ventures.",
   primaryCta: { label: "Apply Now", href: "/apply" },
   secondaryCta: { label: "Learn More", href: "/#about" },
 };
