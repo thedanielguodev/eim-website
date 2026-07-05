@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
@@ -26,13 +27,13 @@ function TrackCard({
       </div>
       <h3 className="mt-5 text-lg font-semibold text-foreground">{name}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{description}</p>
-      <a
-        href="#requirements"
+      <Link
+        href="/#requirements"
         className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue-600 hover:text-brand-blue-700"
       >
         Learn More
         <ArrowRight className="h-4 w-4" />
-      </a>
+      </Link>
     </Card>
   );
 }

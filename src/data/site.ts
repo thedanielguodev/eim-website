@@ -21,16 +21,16 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Competition", href: "#competition" },
-  { label: "Timeline", href: "#timeline" },
-  { label: "Tracks", href: "#tracks" },
-  { label: "Requirements", href: "#requirements" },
-  { label: "Judging", href: "#judging" },
-  { label: "Sponsors", href: "#sponsors" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Competition", href: "/#competition" },
+  { label: "Timeline", href: "/#timeline" },
+  { label: "Tracks", href: "/#tracks" },
+  { label: "Requirements", href: "/#requirements" },
+  { label: "Judging", href: "/#judging" },
+  { label: "Sponsors", href: "/#sponsors" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const heroContent = {
@@ -38,7 +38,7 @@ export const heroContent = {
   headline: "Turn Ideas Into Impact.",
   subheadline: loremShort,
   primaryCta: { label: "Apply Now", href: "/apply" },
-  secondaryCta: { label: "Learn More", href: "#about" },
+  secondaryCta: { label: "Learn More", href: "/#about" },
 };
 
 export const stats = [

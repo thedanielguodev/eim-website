@@ -47,12 +47,12 @@ export function Footer() {
           <ul className="mt-4 space-y-3">
             {footerLinks.quickLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className="text-sm text-muted transition-colors hover:text-brand-blue-600"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
