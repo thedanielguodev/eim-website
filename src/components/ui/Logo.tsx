@@ -1,10 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
 
 export function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2.5" aria-label={siteConfig.name}>
+    <Link
+      href="/"
+      onClick={() => window.scrollTo({ top: 0 })}
+      className="flex items-center gap-2.5"
+      aria-label={siteConfig.name}
+    >
       <Image
         src="/logo.jpg"
         alt=""

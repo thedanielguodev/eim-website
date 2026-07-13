@@ -52,7 +52,11 @@ export function Navbar() {
                     {link.label}
                   </a>
                 ) : (
-                  <Link href={link.href} className={className}>
+                  <Link
+                    href={link.href}
+                    onClick={link.href === "/" ? () => window.scrollTo({ top: 0 }) : undefined}
+                    className={className}
+                  >
                     {link.label}
                   </Link>
                 )}
@@ -100,7 +104,10 @@ export function Navbar() {
                     ) : (
                       <Link
                         href={link.href}
-                        onClick={() => setMenuOpen(false)}
+                        onClick={() => {
+                          setMenuOpen(false);
+                          if (link.href === "/") window.scrollTo({ top: 0 });
+                        }}
                         className={className}
                       >
                         {link.label}
